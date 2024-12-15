@@ -1,13 +1,12 @@
 # exchange-frontend
 
-`exchange-frontend` é o frontend da aplicação **Coin Exchange**. Ele fornece a interface de usuário para interação com o sistema de troca de criptomoedas, permitindo que os usuários façam transações de forma intuitiva e eficiente.
+`exchange-frontend` é o frontend da aplicação **Coin Exchange**. Ele fornece a interface de usuário para interação com o sistema de troca de moedas, permitindo que os usuários façam transações de forma intuitiva e eficiente.
 
-Este repositório faz parte do projeto **[coin-exchange](https://github.com/lucascamp/coin-exchange)**, um sistema completo para troca de criptomoedas.
+Este repositório faz parte do projeto **[coin-exchange](https://github.com/lucascamp/coin-exchange)**, um sistema completo para troca de moedas.
 
 ## ⚡️ Funcionalidades
 
 - Interface em tempo real para visualização das taxas de câmbio.
-- Navegação intuitiva e responsiva.
 - Integração com a API backend para fazer transações.
 - Suporte a funcionalidades avançadas como login e preferências do usuário.
 
