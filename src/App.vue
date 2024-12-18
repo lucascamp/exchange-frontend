@@ -7,11 +7,8 @@ const apiStore = useApiStore()
 
 const router = useRouter(); 
 
-onMounted(() => {
-  apiStore.getCoins()
-})
-
 const isLoggedIn = computed(() => !!localStorage.getItem('token'));
+
 const route = useRoute();
 
 const logout = () => {
@@ -35,17 +32,16 @@ watch(isLoggedIn, (newValue) => {
   <header>
     <nav>
       <RouterLink
-        v-if="isLoggedIn && route.name !== 'login'"
+        v-if="route.name !== 'login'"
         :to="route.name === 'coins' ? { name: 'listTransactions' } : { name: 'coins' }"
         class="nav-link"
       >
         {{ route.name === 'coins' ? 'Listar Transações' : 'Converter Moeda' }}
       </RouterLink>
 
-      <p v-if="isLoggedIn && apiStore.name && route.name !== 'login'" class="text-white">Olá {{ apiStore.name }}</p>
+      <p v-if=" apiStore.name && route.name !== 'login'" class="text-white">Olá {{ apiStore.name }}</p>
 
-      <RouterLink v-if="!isLoggedIn && route.name !== 'login'" :to="{ name: 'login' }" class="nav-link">Login</RouterLink>
-      <button v-if="isLoggedIn && route.name !== 'login'" @click="logout" class="nav-link">Logout</button>
+      <button v-if="route.name !== 'login'" @click="logout" class="nav-link">Logout</button>
       
     </nav>
   </header>

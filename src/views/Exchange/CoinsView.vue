@@ -19,6 +19,7 @@ const formatCoins = (data) => {
 };
 
 onMounted(() => {
+  apiStore.getCoins()
   if (apiStore.coinData) {
     coins.value = formatCoins(apiStore.coinData);
   }
