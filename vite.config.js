@@ -19,7 +19,7 @@ export default defineConfig({
   server: {
     proxy:{
       '/api': {
-        target: "https://c05f-2804-214-c010-3596-9d69-570e-52ca-accc.ngrok-free.app/",
+        target: "http://localhost",
         changeOrigin: true,
         headers: {
           Accept: "application/json",
